@@ -8,13 +8,8 @@
 
     chrome.browserAction.onClicked.addListener(function (tab) {
         // update icon & notify content script
-        if (isAwake) {
-            chrome.browserAction.setIcon({path: 'img/sleep-icon.png'});
-            chrome.tabs.sendMessage(tab.id, {activated: false});
-        } else {
-            chrome.browserAction.setIcon({path: 'img/icon.png'});
-            chrome.tabs.sendMessage(tab.id, {activated: true});
-        }
+        chrome.browserAction.setIcon({path: isAwake ? 'img/sleep-icon.png' : 'img/icon.png'});
+        chrome.tabs.sendMessage(tab.id, {activated: !isAwake});
 
         isAwake = !isAwake;
     });
