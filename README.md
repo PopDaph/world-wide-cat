@@ -40,4 +40,7 @@ There should be a new icon display in the browser:
 * if the cat is sleeping, click on it to activate the extension
 * if the cat is meowing, click on it to disable the extension
 
+
+![Preview](https://daphdaone.github.io/world-wide-cat/img/world-wide-cats.gif)
+
 So simple even your cat could use it!
